@@ -1,4 +1,5 @@
 let numberofsquare = document.querySelector('#input').value;
+
 function makegrid(x){
     let grid = document.querySelector('#grid');
     grid.style.cssText = `display: grid; grid-template-columns: repeat(${x},auto)`
@@ -11,6 +12,8 @@ function makegrid(x){
         }
     }
 };
+
+makegrid(numberofsquare);
 // const black = document.querySelector('#black');
 // black.addEventListener('click', () =>{
 //     return color = 'black'
@@ -20,16 +23,15 @@ function makegrid(x){
 const griditems = document.querySelectorAll('.griditems');
 griditems.forEach((griditem) => {
     griditem.addEventListener('mouseover', () => {
-        griditem.style.cssText = `background-color: black;`;
+        griditem.style.cssText = 'background-color: black;'
 })});
 
 
 // square to white colour when click clear
-// const clear = document.querySelector('#clear');
-// clear.addEventListener('click',() => {
-//     griditems.forEach((griditem) => {
-//         griditem.style.cssText = `background-color: white;`
-//     })
-// });
+const clear = document.querySelector('#clear');
+clear.addEventListener('click',() => {
+    griditems.forEach((griditem) => {
+        griditem.style.cssText = `background-color: white;`
+    })
+});
 
-makegrid(numberofsquare);
