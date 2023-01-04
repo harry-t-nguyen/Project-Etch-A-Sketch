@@ -23,10 +23,11 @@ img, picture, svg, video{
     max-width: 100%;
 }
 
-/* #container{
+#container{
     display: flex;
     flex-direction: column;
-} */
+    gap: 50px;
+}
 
 .header{
     text-align: center;
@@ -53,4 +54,12 @@ img, picture, svg, video{
 
 .griditems{
     border: solid 1px;
+}
+
+.noborder{
+    border:none;
+}
+
+.footer{
+    text-align: center;
 }
